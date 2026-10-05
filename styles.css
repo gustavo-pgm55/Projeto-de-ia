@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    /* Cria espaço do lado de fora do elemento.*/
+    padding: 0;
+    /* Cria espaço entre o conteúdo e a borda.*/
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5efff;
+    color: #3b2464;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5b21b6;
+    font-size: 50px;
+    font-weight: 800;
+    text-shadow: 0 2px 10px rgba(91, 33, 182, 0.18);
+}
+
+.topo {
+    color: #7c5aa6;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.caixa-total {
+    background-color: #e9dff0;
+    border-radius: 10px;
+    border: 3px dashed #5A1EA6;
+    color: #5A1EA6;
+    /*Muda a cor do texto.*/
+    padding: 16px;
+    /*Cria espaço entre o conteúdo e a borda.*/
+    text-align: center;
+    /*Alinha o texto */
+}
+
+.total {
+    font-size: 42px;
+    font-weight: bold;
+    /* deixar o texto em negrito*/
+    margin: 10px;
+}
+
+label {
+    background-color: #f4ecff;
+    border: 2px dashed #8b5cf6;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+    font-weight: bold;
+    color: #5b21b6;
+    display: block;
+    cursor: pointer;
+    margin: 12px 0;
+}
+
+input {
+    display: none;
+    /* esconder algo*/
+
+}
+
+.comprovante {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.itens {
+    white-space: pre-line;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #4a5b78;
+}
+
+.itens strong {
+    font-size: 17px;
+    color: #22304a;
+}
+
+.total-nota {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px dashed #d6dee9;
+    padding-top: 12px;
+    margin-top: 12px;
+    font-size: 15px;
+    color: #6b7a94;
+}
+.total-nota strong {
+    font-size: 20px;
+    color: #730f76;
+}
