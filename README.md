@@ -1,55 +1,50 @@
-# 📸 Ajudante de Gastos
+# 💰 Gasto na Foto
 
-Assistente de finanças com inteligência artificial. Você envia a foto de um comprovante e o app registra o valor e as informações, somando tudo para mostrar quanto você já gastou.
+**Controle financeiro inteligente com auxílio de Inteligência Artificial.**
 
-🔗 **Acesse o projeto:** https://html-gamma-coral.vercel.app/
+O Gasto na Foto é uma aplicação web que permite organizar informações financeiras a partir de comprovantes enviados como imagens. Com o auxílio da IA, o sistema extrai informações dos comprovantes e ajuda a estruturar os dados em uma planilha, facilitando o acompanhamento das despesas.
 
-> ⚠️ Projeto em desenvolvimento. Novas funcionalidades estão sendo adicionadas.
+🌐 **Acesse o projeto:** https://html-gamma-coral.vercel.app/
 
-## Como funciona
+## ✨ Funcionalidades
 
-1. Abra o app no celular ou no computador.
-2. Toque em **"Toque para enviar o comprovante"** e escolha a foto do comprovante.
-3. A IA lê a imagem e anota o valor e as demais informações.
-4. O app soma com os comprovantes enviados antes e mostra o **Total Gasto**.
+- 📸 Envio de imagens de comprovantes.
+- 🤖 Leitura e extração de informações com Inteligência Artificial.
+- 📊 Organização dos dados financeiros em formato de planilha.
+- 🧮 Cálculo e acompanhamento de valores extraídos dos comprovantes.
+- 🔐 Cadastro e login de usuários.
+- 🗄️ Integração com banco de dados usando Supabase.
+- 🖼️ Armazenamento e consulta de comprovantes.
+- 🌐 Aplicação publicada na Vercel.
 
-## Tecnologias
+## 🛠️ Tecnologias utilizadas
 
-- HTML
-- CSS
-- JavaScript
-- Inteligência artificial para leitura dos comprovantes
-- Git e GitHub para versionamento
-- Vercel para publicação online
+- **HTML5** — estrutura da aplicação.
+- **CSS3** — estilos e interface visual.
+- **JavaScript** — lógica e interatividade.
+- **Supabase** — autenticação, banco de dados e armazenamento de arquivos.
+- **Puter AI** — recursos de inteligência artificial.
+- **Vercel** — hospedagem e publicação do projeto.
+- **Git e GitHub** — versionamento e gerenciamento do código.
 
-## Estrutura do projeto
+## 🚀 Como acessar
 
-```
-├── index.html   # estrutura da página
-├── styles.css   # estilos e layout (pensado para celular)
-└── script.js    # lógica do app
-```
+A aplicação está disponível online:
 
-## Como rodar localmente
+👉 https://html-gamma-coral.vercel.app/
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/gustavo-pgm55/Projeto-de-ia.git
-   ```
-2. Entre na pasta do projeto:
-   ```bash
-   cd Projeto-de-ia
-   ```
-3. Abra o arquivo `index.html` no navegador.
+Acesse pelo navegador para conhecer a interface e experimentar as funcionalidades disponíveis.
 
-## Próximos passos
+## 🎯 Objetivo do projeto
 
-- Guardar o histórico de comprovantes
-- Separar os gastos por categoria
-- Melhorar a leitura de comprovantes com a imagem de baixa qualidade
+O objetivo do Gasto na Foto é simplificar a organização financeira, reduzindo o trabalho manual de registrar informações de comprovantes e utilizando Inteligência Artificial para auxiliar no processamento dos dados.
 
-## Autor
+Este projeto também faz parte do meu processo de aprendizado e desenvolvimento de habilidades em programação web, integração com serviços externos, banco de dados e Inteligência Artificial.
 
-**Arthur Gustavo Lima de Freitas**
-Estudante de ensino médio técnico, Arcoverde – PE
-📧 arthurgustavo13y@gmail.com
+## 👨‍💻 Desenvolvimento
+
+Projeto desenvolvido com foco no aprendizado prático de desenvolvimento web e na criação de soluções úteis para o dia a dia.
+
+---
+
+**Gasto na Foto** — transformando comprovantes em informações financeiras organizadas. 📄💰
