@@ -1,8 +1,8 @@
+
 * {
     margin: 0;
-    /* Cria espaço do lado de fora do elemento.*/
     padding: 0;
-    /* Cria espaço entre o conteúdo e a borda.*/
+    box-sizing: border-box;
 }
 
 body {
@@ -14,11 +14,14 @@ body {
     padding: 24px;
 }
 
+header {
+    margin-bottom: 24px;
+}
+
 h1 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     color: #5b21b6;
-    font-size: 50px;
+    font-size: clamp(32px, 8vw, 50px);
     font-weight: 800;
     text-shadow: 0 2px 10px rgba(91, 33, 182, 0.18);
 }
@@ -28,7 +31,124 @@ h1 {
     text-align: center;
     font-size: 15px;
     line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 8px;
+}
+
+/* Cadastro e login */
+.painel-auth {
+    background: #ffffff;
+    border: 1px solid #e3d4fa;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(91, 33, 182, 0.08);
+}
+
+.painel-auth h2 {
+    color: #5b21b6;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#mensagem-auth {
+    color: #7c5aa6;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#form-auth label {
+    display: block;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 16px 0 8px;
+    text-align: left;
+    color: #4b287e;
+    cursor: default;
+}
+
+#form-auth input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbb7ed;
+    border-radius: 10px;
+    background: #fcfaff;
+    color: #3b2464;
+    font-size: 16px;
+}
+
+#form-auth input:focus {
+    outline: 2px solid #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+button {
+    font-family: inherit;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#botao-auth {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #6d28d9;
+    color: white;
+    font-weight: bold;
+}
+
+#botao-auth:hover {
+    background: #5b21b6;
+}
+
+#alternar-auth {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #6d28d9;
+}
+
+#status-auth {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Área principal após o login */
+.barra-conta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+    overflow-wrap: anywhere;
+}
+
+#usuario-logado {
+    color: #6b4a91;
+    font-size: 13px;
+}
+
+#botao-sair {
+    padding: 8px 12px;
+    border: 1px solid #cbb7ed;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #5b21b6;
 }
 
 .caixa-total {
@@ -36,21 +156,24 @@ h1 {
     border-radius: 10px;
     border: 3px dashed #5A1EA6;
     color: #5A1EA6;
-    /*Muda a cor do texto.*/
     padding: 16px;
-    /*Cria espaço entre o conteúdo e a borda.*/
     text-align: center;
-    /*Alinha o texto */
+    margin-bottom: 16px;
+}
+
+.valor {
+    font-size: 16px;
 }
 
 .total {
     font-size: 42px;
     font-weight: bold;
-    /* deixar o texto em negrito*/
     margin: 10px;
+    overflow-wrap: anywhere;
 }
 
-label {
+/* Seleção da foto: esconde apenas o input de arquivo */
+label[for="foto"] {
     background-color: #f4ecff;
     border: 2px dashed #8b5cf6;
     border-radius: 16px;
@@ -63,10 +186,8 @@ label {
     margin: 12px 0;
 }
 
-input {
+#foto {
     display: none;
-    /* esconder algo*/
-
 }
 
 .comprovante {
@@ -74,6 +195,7 @@ input {
     border-radius: 14px;
     padding: 16px;
     margin-bottom: 12px;
+    overflow-wrap: anywhere;
 }
 
 .itens {
@@ -89,15 +211,55 @@ input {
 }
 
 .total-nota {
-    display: flex;
-    justify-content: space-between;
     border-top: 1px dashed #d6dee9;
     padding-top: 12px;
     margin-top: 12px;
     font-size: 15px;
     color: #6b7a94;
 }
-.total-nota strong {
-    font-size: 20px;
-    color: #730f76;
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 380px) {
+    body {
+        padding: 16px;
+    }
+
+    .painel-auth {
+        padding: 18px;
+    }
+}
+[hidden] {
+    display: none !important;
+}
+
+/* Gráfico de gastos por categoria */
+.caixa-grafico {
+    background: #ffffff;
+    border: 1px solid #e3d4fa;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(91, 33, 182, 0.06);
+}
+
+.caixa-grafico h3 {
+    color: #5b21b6;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+#grafico-categorias {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+}
+
+#grafico-categorias canvas {
+    display: block;
+    width: 100% !important;
+    max-height: 280px;
 }

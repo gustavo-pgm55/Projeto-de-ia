@@ -1,36 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://js.puter.com/v2/"></script>
-    <title> Ajudante de Gastos </title>
+    <title>Gasto na Foto</title>
 </head>
 
 <body>
-    <div>
-        <h1>
-            📸 Gasto na Foto
-        </h1>
-        <p class="topo">
-            Fotografe o comprovante a IA anota pra você fazer
-        </p>
-    </div>
-    <div class="caixa-total">
-        <p class="valor"> Total Gasto</p>
-        <h2 class="total">R$ 0,00</h2>
-    </div>
-    <label> <!-- Etiqueta -->
-        📄 Toque para enviar o comprovante
-        <input class="foto" onchange="lerfoto()" type="file" accept="image/*"> <!-- Aceitar fotos -->
-    </label>
-    <div class="lista">
 
-    </div>
+    <header>
+        <h1>📸 Gasto na Foto</h1>
+        <p class="topo">✨ Envie o comprovante e deixe os cálculos com a IA.</p>
+    </header>
+
+    <!-- Área de cadastro e login -->
+    <section id="tela-auth" class="painel-auth">
+        <h2 id="titulo-auth">Criar conta</h2>
+        <p id="mensagem-auth">Cadastre seu e-mail e crie uma senha.</p>
+
+        <form id="form-auth">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" autocomplete="email" placeholder="seu@email.com" required>
+
+            <label for="senha">Senha</label>
+            <input id="senha" type="password" autocomplete="new-password" placeholder="Mínimo de 6 caracteres"
+                minlength="6" required>
+
+            <button id="botao-auth" type="submit">Criar conta</button>
+        </form>
+
+        <p id="status-auth" role="status" aria-live="polite"></p>
+
+        <button id="alternar-auth" type="button">
+            Já tenho uma conta — entrar
+        </button>
+    </section>
+
+    <!-- Área principal: fica oculta até o usuário entrar -->
+    <main id="app" hidden>
+        <div class="barra-conta">
+            <span id="usuario-logado"></span>
+            <button id="botao-sair" type="button">Sair</button>
+        </div>
+
+        <div class="caixa-total">
+            <p class="valor">Total Gasto</p>
+            <h2 class="total">R$ 0,00</h2>
+        </div>
+
+        <section class="caixa-grafico">
+            <h3>📊 Gastos por categoria</h3>
+            <div id="grafico-categorias">
+                <canvas id="canvas-categorias"></canvas>
+            </div>
+            <p id="mensagem-grafico">Seus gastos por categoria aparecerão aqui.</p>
+        </section>
+
+
+        <label for="foto">
+            📄 Toque para enviar o comprovante
+        </label>
+        <input id="foto" class="foto" type="file" accept="image/*" capture="environment">
+
+        <div class="lista"></div>
+    </main>
+
+    <!-- Bibliotecas externas -->
+    <script src="https://js.puter.com/v2/"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Arquivos do projeto -->
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
 </body>
-<script src="https://js.puter.com/v2/"></script>
-<script src="scripts.js"></script>
 
 </html>
